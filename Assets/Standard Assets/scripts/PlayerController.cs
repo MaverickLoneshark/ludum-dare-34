@@ -5,6 +5,7 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 	private PlayerCharacter playerCharacter;
 	private Vector3 motion;
+	private float jumpForce;
 
 	// Use these for initialization
 	void Awake()
@@ -25,13 +26,32 @@ public class PlayerController : MonoBehaviour {
 		if(playerCharacter.isGrounded())
 		{
 			playerCharacter.stopFall();
+			jumpForce = 0;
+			playerCharacter.setCrouching(Input.GetAxis("Vertical") < 0);
 		}
 		else
 		{
 			playerCharacter.fall();
 		}
 		
-		motion.y = playerCharacter.gravity + Input.GetAxis("Vertical") * playerCharacter.speed;
+		if(Input.GetAxis("Vertical") > 0)
+		{
+			if(jumpForce < playerCharacter.maxJump)
+			{
+				jumpForce += playerCharacter.jumpGain;
+				playerCharacter.rigidbody2D.AddForce(new Vector2(0, playerCharacter.maxJump - jumpForce));
+			}
+		}
+		else {
+			jumpForce = playerCharacter.maxJump;
+		}
+		
+		if(Input.GetButtonDown("Fire1"))
+		{
+			playerCharacter.attack();
+		}
+		
+		motion.y = playerCharacter.getFallSpeed();
 		motion.x = Input.GetAxis("Horizontal") * playerCharacter.speed;
 		playerCharacter.setMotion(motion);
 		
