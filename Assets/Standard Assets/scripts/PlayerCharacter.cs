@@ -13,6 +13,9 @@ public class PlayerCharacter : MonoBehaviour {
 	[SerializeField] private LayerMask groundLayer; // A mask determining what is ground to the character
 	[SerializeField] private float maxSpeed = 30.0F;
 
+	[SerializeField] private bool hasSword = false;
+	[SerializeField] private bool hasCookie = false;
+
 	private bool grounded;
 	private bool crouching;
 	private bool facingRight = true;  // For determining which way the player is currently facing.
@@ -22,10 +25,13 @@ public class PlayerCharacter : MonoBehaviour {
 	private Transform ceilingCheck; // A position marking where to check for ceilings.
 	const float checkRadius = 0.5f; // Radius of the overlap circle to determine if grounded
 	private Animator animator;
+	private PlayerController playerController;
 
 	public void attack() {
-		animator.SetTrigger("triggerAttack");
-		audioSource.Play();
+		if((!crouching) && hasSword) {
+			animator.SetTrigger("triggerAttack");
+			audioSource.Play();
+		}
 		
 		return;
 	}
@@ -79,6 +85,7 @@ public class PlayerCharacter : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		playerController = GetComponent<PlayerController>();
 		rigidbody2D = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
 		audioSource = GetComponent<AudioSource>();
@@ -99,7 +106,7 @@ public class PlayerCharacter : MonoBehaviour {
 	{
 		grounded = false;
 		
-		if (!crouching)
+		if(!crouching)
 		{
 			rigidbody2D.velocity = motion;
 		}
@@ -129,7 +136,7 @@ public class PlayerCharacter : MonoBehaviour {
 		if(grounded)
 		{
 			animator.SetBool("jumpState", false);
-			animator.SetBool("walkState", (rigidbody2D.velocity.x != 0));
+			animator.SetBool("walkState", (rigidbody2D.velocity.x != 0) && (!crouching));
 			animator.SetBool("crouchState", crouching);
 		}
 		else if(!animator.GetBool("jumpState")) {
@@ -141,6 +148,32 @@ public class PlayerCharacter : MonoBehaviour {
 		return;
 	}
 
+
+	void OnTriggerEnter2D(Collider2D other) {
+		Collectible collectible = other.gameObject.GetComponent<Collectible>();
+		
+		switch(collectible.type)
+		{
+			case "sword":
+				hasSword = true;
+			break;
+			
+			case "cookie":
+				hasCookie = true;
+			break;
+			
+			default:
+				//
+			break;
+		}
+		
+		collectible.playAudio();
+		Destroy(other.gameObject);
+		
+		return;
+	}
+	
+	/*
 	void OnControllerColliderHit(ControllerColliderHit hit)
 	{
 Debug.Log(hit);
@@ -156,4 +189,5 @@ Debug.Log(hit);
 
 		return;
 	}
+	*/
 }
