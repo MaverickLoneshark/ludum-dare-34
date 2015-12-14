@@ -168,24 +168,28 @@ public class PlayerCharacter : MonoBehaviour {
 		return;
 	}
 
-
-	void OnTriggerEnter2D(Collider2D other) {
+	void OnCollisionEnter2D(Collision2D other) {
 		GameObject otherGameObject = other.gameObject;
-		Collectible collectible = otherGameObject.GetComponent<Collectible>();
 		EnemyController enemyController = otherGameObject.GetComponent<EnemyController>();
-
-		while((!collectible) && (!enemyController)) {
-			otherGameObject = (GetComponentInParent<Transform>()).gameObject;
-			collectible = otherGameObject.GetComponent<Collectible>();
-			enemyController = otherGameObject.GetComponent<EnemyController>();
+		
+		if (LayerMask.LayerToName(otherGameObject.layer) == "Enemy")
+		{
+			while (!enemyController && otherGameObject.transform.parent)
+			{
+				otherGameObject = otherGameObject.transform.parent.gameObject;
+				enemyController = otherGameObject.GetComponent<EnemyController>();
+			}
 		}
 		
-		if(enemyController)
+		if (enemyController)
 		{
-			switch(enemyController.type)
+			switch (enemyController.type)
 			{
 				case "rawrbert":
+					Camera.main.GetComponent<UnityStandardAssets._2D.Camera2DFollow>().target = otherGameObject.transform;
 					DestroyObject(gameObject);
+					Camera.main.transform.FindChild("Canvas").gameObject.SetActive(true);
+					Camera.main.GetComponent<GameController>().gameState = "gameover";
 				break;
 				
 				default:
@@ -193,7 +197,16 @@ public class PlayerCharacter : MonoBehaviour {
 				break;
 			}
 		}
-		else if (collectible)
+		
+		return;
+	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		GameObject otherGameObject = other.gameObject;
+		Collectible collectible = otherGameObject.GetComponent<Collectible>();
+		
+		if (collectible)
 		{
 			switch (collectible.type)
 			{
@@ -213,7 +226,7 @@ public class PlayerCharacter : MonoBehaviour {
 					hasBoots = true;
 					break;
 
-				case "Gun":
+				case "gun":
 					hasGun = true;
 					break;
 
@@ -228,22 +241,4 @@ public class PlayerCharacter : MonoBehaviour {
 
 		return;
 	}
-	
-	/*
-	void OnControllerColliderHit(ControllerColliderHit hit)
-	{
-Debug.Log(hit);
-		Rigidbody body = hit.collider.attachedRigidbody;
-		if (body == null || body.isKinematic)
-			return;
-
-		if (hit.moveDirection.y < -0.3F)
-			return;
-
-		Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
-		body.velocity = pushDir * pushPower;
-
-		return;
-	}
-	*/
 }

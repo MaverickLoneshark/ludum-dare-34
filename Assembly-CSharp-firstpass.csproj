@@ -93,8 +93,10 @@
      <Compile Include="Assets\Standard Assets\Utility\TimedObjectDestructor.cs" />
      <Compile Include="Assets\Standard Assets\Utility\WaypointCircuit.cs" />
      <Compile Include="Assets\Standard Assets\Utility\WaypointProgressTracker.cs" />
+     <Compile Include="Assets\Standard Assets\scripts\CameraTrigger.cs" />
      <Compile Include="Assets\Standard Assets\scripts\Collectible.cs" />
      <Compile Include="Assets\Standard Assets\scripts\EnemyController.cs" />
+     <Compile Include="Assets\Standard Assets\scripts\GameController.cs" />
      <Compile Include="Assets\Standard Assets\scripts\PlayerCharacter.cs" />
      <Compile Include="Assets\Standard Assets\scripts\PlayerController.cs" />
      <Compile Include="Assets\Standard Assets\scripts\Weapon.cs" />

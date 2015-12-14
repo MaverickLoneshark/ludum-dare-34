@@ -22,22 +22,45 @@ public class EnemyController : MonoBehaviour {
 	
 	}
 
+	//these are essentially useless for all but active frame
+	/*
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		Weapon weapon = other.GetComponent<Weapon>();
-
-		switch(weapon.type)
-		{
-			case "sword":
-				playAudio();
-				DestroyObject(gameObject);
-			break;
-			
-			default:
-				//
-			break;
-		}
-		
+Debug.Log(gameObject + " trigger");
 		return;
 	}
-}
+	
+	void OnCollisionEnter2D(Collision2D other)
+	{
+Debug.Log(gameObject + " collision");
+		GameObject otherGameObject = other.gameObject;
+		Weapon weapon = otherGameObject.GetComponent<Weapon>();
+
+		if(LayerMask.LayerToName(otherGameObject.layer) == "Player")
+		{
+			while(!weapon && otherGameObject.transform.parent)
+			{
+				otherGameObject = otherGameObject.transform.parent.gameObject;
+				weapon = otherGameObject.GetComponent<Weapon>();
+			}
+		}
+
+		if(weapon)
+		{
+			switch(weapon.type)
+			{
+				case "sword":
+					playAudio();
+					DestroyObject(gameObject);
+					break;
+
+				default:
+					//
+					break;
+			}
+		}
+
+		return;
+	}
+	*/
+	}
