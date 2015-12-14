@@ -15,6 +15,9 @@ public class PlayerCharacter : MonoBehaviour {
 
 	[SerializeField] private bool hasSword = false;
 	[SerializeField] private bool hasCookie = false;
+	[SerializeField] private bool hasGun = false;
+	public bool hasSack = false;
+	public bool hasBoots = false;
 
 	private bool grounded;
 	private bool crouching;
@@ -26,7 +29,7 @@ public class PlayerCharacter : MonoBehaviour {
 	const float checkRadius = 0.5f; // Radius of the overlap circle to determine if grounded
 	private Animator animator;
 	private PlayerController playerController;
-
+	
 	public void attack() {
 		if((!crouching) && hasSword) {
 			animator.SetTrigger("triggerAttack");
@@ -37,7 +40,15 @@ public class PlayerCharacter : MonoBehaviour {
 	}
 
 	public void fall() {
-		fallspeed = gravity;
+		if(hasSack)
+		{
+			fallspeed = gravity;
+		}
+		else
+		{
+			fallspeed = gravity * 1.5F;
+		}
+
 		grounded = false;
 		
 		return;
@@ -136,13 +147,22 @@ public class PlayerCharacter : MonoBehaviour {
 		if(grounded)
 		{
 			animator.SetBool("jumpState", false);
+			animator.SetBool("parachuteState", false);
 			animator.SetBool("walkState", (rigidbody2D.velocity.x != 0) && (!crouching));
 			animator.SetBool("crouchState", crouching);
 		}
-		else if(!animator.GetBool("jumpState")) {
+		else if(!animator.GetBool("jumpState") && !animator.GetBool("parachuteState")) {
 			animator.SetBool("crouchState", false);
 			animator.SetBool("walkState", false);
-			animator.SetBool("jumpState", true);
+
+			if(hasSack)
+			{
+				animator.SetBool("parachuteState", true);
+			}
+			else
+			{
+				animator.SetBool("jumpState", true);
+			}
 		}
 		
 		return;
@@ -150,26 +170,62 @@ public class PlayerCharacter : MonoBehaviour {
 
 
 	void OnTriggerEnter2D(Collider2D other) {
-		Collectible collectible = other.gameObject.GetComponent<Collectible>();
-		
-		switch(collectible.type)
-		{
-			case "sword":
-				hasSword = true;
-			break;
-			
-			case "cookie":
-				hasCookie = true;
-			break;
-			
-			default:
-				//
-			break;
+		GameObject otherGameObject = other.gameObject;
+		Collectible collectible = otherGameObject.GetComponent<Collectible>();
+		EnemyController enemyController = otherGameObject.GetComponent<EnemyController>();
+
+		while((!collectible) && (!enemyController)) {
+			otherGameObject = (GetComponentInParent<Transform>()).gameObject;
+			collectible = otherGameObject.GetComponent<Collectible>();
+			enemyController = otherGameObject.GetComponent<EnemyController>();
 		}
 		
-		collectible.playAudio();
-		Destroy(other.gameObject);
-		
+		if(enemyController)
+		{
+			switch(enemyController.type)
+			{
+				case "rawrbert":
+					DestroyObject(gameObject);
+				break;
+				
+				default:
+					//
+				break;
+			}
+		}
+		else if (collectible)
+		{
+			switch (collectible.type)
+			{
+				case "sword":
+					hasSword = true;
+					break;
+
+				case "cookie":
+					hasCookie = true;
+					break;
+
+				case "sack":
+					hasSack = true;
+					break;
+
+				case "boots":
+					hasBoots = true;
+					break;
+
+				case "Gun":
+					hasGun = true;
+					break;
+
+				default:
+					//
+					break;
+			}
+
+			collectible.playAudio();
+			Destroy(other.gameObject);
+		}
+
 		return;
 	}
 	

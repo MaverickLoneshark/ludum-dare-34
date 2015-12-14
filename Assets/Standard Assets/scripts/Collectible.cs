@@ -5,6 +5,13 @@ public class Collectible : MonoBehaviour {
 	public System.String type = "item";
 	public AudioClip audioClip = new AudioClip();
 	
+	public void playAudio()
+	{
+		AudioSource.PlayClipAtPoint(audioClip, Camera.main.transform.position);
+
+		return;
+	}
+	
 	// Use this for initialization
 	void Awake() {
 		//
@@ -15,13 +22,7 @@ public class Collectible : MonoBehaviour {
 		//
 		return;
 	}
-
-	public void playAudio() {
-		AudioSource.PlayClipAtPoint(audioClip, Camera.main.transform.position);
-		
-		return;
-	}
-
+	
 	// Update is called once per frame
 	void Update () {
 		//

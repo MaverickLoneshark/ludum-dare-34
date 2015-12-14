@@ -39,6 +39,12 @@ public class PlayerController : MonoBehaviour {
 			if(jumpForce < playerCharacter.maxJump)
 			{
 				jumpForce += playerCharacter.jumpGain;
+				
+				if(!playerCharacter.hasBoots)
+				{
+					jumpForce += ((int)playerCharacter.jumpGain >> 1);
+				}
+				
 				playerCharacter.rigidbody2D.AddForce(new Vector2(0, playerCharacter.maxJump - jumpForce));
 			}
 		}
