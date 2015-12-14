@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: d7f0e73ec55ef8a4c8058aae78662d72
+labels:
+- Character
 timeCreated: 1450062369
 licenseType: Free
 TextureImporter:

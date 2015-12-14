@@ -1,0 +1,319 @@
+fileFormatVersion: 2
+guid: 99e28105350f3234f93e2b4c9695da5b
+labels:
+- Character
+timeCreated: 1450119841
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Sick_Coat_Spritesheet_0
+    21300002: Sick_Coat_Spritesheet_1
+    21300004: Sick_Coat_Spritesheet_2
+    21300006: Sick_Coat_Spritesheet_3
+    21300008: Sick_Coat_Spritesheet_4
+    21300010: Sick_Coat_Spritesheet_5
+    21300012: Sick_Coat_Spritesheet_6
+    21300014: Sick_Coat_Spritesheet_7
+    21300016: Sick_Coat_Spritesheet_8
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Sick_Coat_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2976
+        width: 1488
+        height: 1488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: 16}
+        - {x: -55, y: 16}
+        - {x: -68, y: -12}
+        - {x: -68, y: -96}
+        - {x: 71, y: -96}
+        - {x: 74, y: -95}
+        - {x: 74, y: 7}
+        - {x: 69, y: 11}
+      - - {x: -9, y: -77}
+        - {x: -14, y: -77}
+        - {x: -26, y: -90}
+        - {x: -26, y: -94}
+        - {x: -24, y: -96}
+        - {x: -9, y: -96}
+        - {x: -7, y: -93}
+        - {x: -7, y: -83}
+    - name: Sick_Coat_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 2976
+        width: 1488
+        height: 1488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: -100}
+        - {x: 12, y: -106}
+        - {x: 17, y: -106}
+        - {x: 18, y: -105}
+        - {x: 18, y: -100}
+      - - {x: 0, y: -76}
+        - {x: -23, y: -76}
+        - {x: -44, y: -88}
+        - {x: -44, y: -94}
+        - {x: -39, y: -97}
+        - {x: -10, y: -102}
+        - {x: 3, y: -102}
+        - {x: 12, y: -96}
+        - {x: 12, y: -90}
+        - {x: 11, y: -81}
+      - - {x: -34, y: 9}
+        - {x: -44, y: -17}
+        - {x: -44, y: -79}
+        - {x: 20, y: -79}
+        - {x: 48, y: -59}
+        - {x: 48, y: 4}
+        - {x: 32, y: 9}
+    - name: Sick_Coat_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 2976
+        width: 1488
+        height: 1488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43, y: -85}
+        - {x: -40, y: -84}
+        - {x: -40, y: -81}
+        - {x: -43, y: -80}
+        - {x: -45, y: -82}
+      - - {x: 31, y: 4}
+        - {x: 24, y: 2}
+        - {x: 24, y: -1}
+        - {x: 13, y: 18}
+        - {x: -10, y: 18}
+        - {x: -16, y: 17}
+        - {x: -28, y: 4}
+        - {x: -43, y: -57}
+        - {x: -43, y: -68}
+        - {x: -36, y: -70}
+        - {x: 23, y: -70}
+        - {x: 28, y: -69}
+        - {x: 40, y: -27}
+        - {x: 40, y: -4}
+    - name: Sick_Coat_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 4464
+        y: 2976
+        width: 1488
+        height: 1488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: -100}
+        - {x: 12, y: -106}
+        - {x: 17, y: -106}
+        - {x: 18, y: -105}
+        - {x: 18, y: -100}
+      - - {x: -48, y: 12}
+        - {x: -79, y: -9}
+        - {x: -79, y: -34}
+        - {x: -76, y: -42}
+        - {x: -41, y: -77}
+        - {x: -28, y: -81}
+        - {x: 37, y: -81}
+        - {x: 100, y: -36}
+        - {x: 100, y: -14}
+        - {x: 31, y: 12}
+    - name: Sick_Coat_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1488
+        width: 1488
+        height: 1488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43, y: -85}
+        - {x: -40, y: -84}
+        - {x: -40, y: -81}
+        - {x: -43, y: -80}
+        - {x: -45, y: -82}
+      - - {x: 24, y: 2}
+        - {x: 24, y: -1}
+        - {x: 13, y: 18}
+        - {x: -10, y: 18}
+        - {x: -16, y: 17}
+        - {x: -26, y: 4}
+        - {x: -43, y: -57}
+        - {x: -43, y: -68}
+        - {x: -31, y: -70}
+        - {x: 27, y: -70}
+        - {x: 40, y: -33}
+        - {x: 40, y: -1}
+        - {x: 31, y: 4}
+    - name: Sick_Coat_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1488
+        width: 1488
+        height: 1488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46, y: 35}
+        - {x: -99, y: 35}
+        - {x: -99, y: 8}
+        - {x: -67, y: -51}
+        - {x: -52, y: -59}
+        - {x: -9, y: -59}
+        - {x: 42, y: -38}
+        - {x: 64, y: -8}
+        - {x: 64, y: 29}
+    - name: Sick_Coat_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 1488
+        width: 1488
+        height: 1488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -53, y: -11}
+        - {x: -56, y: -28}
+        - {x: -56, y: -83}
+        - {x: -49, y: -107}
+        - {x: -2, y: -118}
+        - {x: 58, y: -118}
+        - {x: 58, y: -84}
+        - {x: 52, y: -50}
+        - {x: 31, y: -11}
+      - - {x: 2, y: -89}
+        - {x: -9, y: -89}
+        - {x: -17, y: -90}
+        - {x: -19, y: -93}
+        - {x: -22, y: -97}
+        - {x: -22, y: -103}
+        - {x: -11, y: -103}
+        - {x: -1, y: -101}
+        - {x: 4, y: -99}
+        - {x: 4, y: -94}
+    - name: Sick_Coat_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 4464
+        y: 1488
+        width: 1488
+        height: 1488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 16}
+        - {x: -38, y: 11}
+        - {x: -68, y: -35}
+        - {x: -68, y: -76}
+        - {x: -65, y: -96}
+        - {x: 36, y: -96}
+        - {x: 78, y: -52}
+        - {x: 78, y: -4}
+        - {x: -2, y: 16}
+      - - {x: -9, y: -77}
+        - {x: -14, y: -77}
+        - {x: -26, y: -90}
+        - {x: -26, y: -94}
+        - {x: -24, y: -96}
+        - {x: -9, y: -96}
+        - {x: -7, y: -93}
+        - {x: -7, y: -83}
+    - name: Sick_Coat_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1488
+        height: 1488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 16}
+        - {x: -36, y: 16}
+        - {x: -63, y: 2}
+        - {x: -68, y: -18}
+        - {x: -68, y: -96}
+        - {x: 40, y: -96}
+        - {x: 76, y: -34}
+        - {x: 76, y: -25}
+        - {x: 65, y: 1}
+      - - {x: -9, y: -77}
+        - {x: -14, y: -77}
+        - {x: -26, y: -90}
+        - {x: -26, y: -94}
+        - {x: -24, y: -96}
+        - {x: -9, y: -96}
+        - {x: -7, y: -93}
+        - {x: -7, y: -83}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

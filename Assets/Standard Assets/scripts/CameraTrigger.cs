@@ -16,6 +16,9 @@ public class CameraTrigger : MonoBehaviour {
 
 	void OnTriggerEnter2D()
 	{
+		target.gameObject.SetActive(true);
+		AudioSource audioSource = GameObject.Find("PlayerCamera").GetComponent<AudioSource>();
+		audioSource.mute = true;
 		target.enabled = true;
 		target.ResetWorldToCameraMatrix();
 
