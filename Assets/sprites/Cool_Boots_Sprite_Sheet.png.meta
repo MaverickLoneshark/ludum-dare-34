@@ -1,0 +1,247 @@
+fileFormatVersion: 2
+guid: 9d2a350ae1981434d878769ca9ff49ca
+labels:
+- Character
+timeCreated: 1450119928
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Cool_Boots_Sprite_Sheet_0
+    21300002: Cool_Boots_Sprite_Sheet_1
+    21300004: Cool_Boots_Sprite_Sheet_2
+    21300006: Cool_Boots_Sprite_Sheet_3
+    21300008: Cool_Boots_Sprite_Sheet_4
+    21300010: Cool_Boots_Sprite_Sheet_5
+    21300012: Cool_Boots_Sprite_Sheet_6
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Cool_Boots_Sprite_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1488
+        width: 1488
+        height: 1488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: -111}
+        - {x: -26, y: -103}
+        - {x: -27, y: -97}
+        - {x: -41, y: -93}
+        - {x: -47, y: -93}
+        - {x: -53, y: -95}
+        - {x: -57, y: -112}
+        - {x: -57, y: -125}
+        - {x: -50, y: -132}
+        - {x: -33, y: -132}
+        - {x: -29, y: -128}
+        - {x: -29, y: -126}
+        - {x: -33, y: -121}
+      - - {x: -7, y: -99}
+        - {x: -20, y: -99}
+        - {x: -23, y: -106}
+        - {x: -26, y: -121}
+        - {x: -26, y: -127}
+        - {x: -19, y: -132}
+        - {x: 9, y: -132}
+        - {x: 11, y: -131}
+        - {x: 11, y: -120}
+        - {x: 8, y: -105}
+    - name: Cool_Boots_Sprite_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1488
+        width: 1488
+        height: 1488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: -99}
+        - {x: 10, y: -103}
+        - {x: 10, y: -117}
+        - {x: 12, y: -130}
+        - {x: 18, y: -133}
+        - {x: 35, y: -133}
+        - {x: 50, y: -128}
+        - {x: 50, y: -104}
+        - {x: 47, y: -99}
+      - - {x: -77, y: -106}
+        - {x: -73, y: -114}
+        - {x: -68, y: -118}
+        - {x: -51, y: -118}
+        - {x: -39, y: -105}
+        - {x: -39, y: -87}
+        - {x: -48, y: -77}
+        - {x: -58, y: -77}
+        - {x: -66, y: -81}
+        - {x: -77, y: -99}
+    - name: Cool_Boots_Sprite_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 1488
+        width: 1488
+        height: 1488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: -70}
+        - {x: -18, y: -70}
+        - {x: -33, y: -81}
+        - {x: -33, y: -113}
+        - {x: -30, y: -123}
+        - {x: -20, y: -125}
+        - {x: -3, y: -126}
+        - {x: 11, y: -126}
+        - {x: 11, y: -88}
+        - {x: 10, y: -83}
+    - name: Cool_Boots_Sprite_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 4464
+        y: 1488
+        width: 1488
+        height: 1488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -64, y: -100}
+        - {x: -54, y: -123}
+        - {x: -36, y: -123}
+        - {x: -29, y: -116}
+        - {x: -29, y: -91}
+        - {x: -39, y: -82}
+        - {x: -48, y: -83}
+        - {x: -64, y: -93}
+      - - {x: 45, y: -90}
+        - {x: 23, y: -90}
+        - {x: 16, y: -103}
+        - {x: 16, y: -114}
+        - {x: 36, y: -123}
+        - {x: 49, y: -123}
+        - {x: 55, y: -118}
+        - {x: 55, y: -95}
+        - {x: 54, y: -91}
+    - name: Cool_Boots_Sprite_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1488
+        height: 1488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37, y: -80}
+        - {x: -37, y: -98}
+        - {x: -27, y: -130}
+        - {x: -22, y: -131}
+        - {x: 2, y: -131}
+        - {x: 6, y: -129}
+        - {x: 6, y: -95}
+        - {x: 2, y: -80}
+    - name: Cool_Boots_Sprite_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 0
+        width: 1488
+        height: 1488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -71}
+        - {x: -15, y: -71}
+        - {x: -36, y: -88}
+        - {x: -36, y: -120}
+        - {x: -31, y: -131}
+        - {x: -7, y: -131}
+        - {x: 6, y: -124}
+        - {x: 12, y: -111}
+        - {x: 12, y: -85}
+        - {x: 10, y: -78}
+    - name: Cool_Boots_Sprite_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 0
+        width: 1488
+        height: 1488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -75, y: -108}
+        - {x: -75, y: -125}
+        - {x: -67, y: -134}
+        - {x: -55, y: -134}
+        - {x: -36, y: -122}
+        - {x: -36, y: -110}
+        - {x: -40, y: -99}
+        - {x: -41, y: -97}
+        - {x: -57, y: -97}
+        - {x: -73, y: -101}
+      - - {x: -4, y: -101}
+        - {x: -9, y: -105}
+        - {x: -9, y: -133}
+        - {x: 27, y: -133}
+        - {x: 28, y: -129}
+        - {x: 28, y: -124}
+        - {x: 17, y: -101}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
