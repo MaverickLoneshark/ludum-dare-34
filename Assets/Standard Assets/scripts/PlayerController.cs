@@ -23,45 +23,49 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(playerCharacter.isGrounded())
-		{
-			playerCharacter.stopFall();
-			jumpForce = 0;
-			playerCharacter.setCrouching(Input.GetAxis("Vertical") < 0);
-		}
-		else
-		{
-			playerCharacter.fall();
-		}
-		
-		if(Input.GetAxis("Vertical") > 0)
-		{
-			if(jumpForce < playerCharacter.maxJump)
+		System.String gameState = Camera.main.GetComponent<GameController>().getGameState();
+
+		if(gameState == "playing") {
+			if(playerCharacter.isGrounded())
 			{
-				jumpForce += playerCharacter.jumpGain;
-				
-				if(!playerCharacter.hasBoots)
-				{
-					jumpForce += ((int)playerCharacter.jumpGain >> 1);
-				}
-				
-				playerCharacter.rigidbody2D.AddForce(new Vector2(0, playerCharacter.maxJump - jumpForce));
+				playerCharacter.stopFall();
+				jumpForce = 0;
+				playerCharacter.setCrouching(Input.GetAxis("Vertical") < 0);
 			}
+			else
+			{
+				playerCharacter.fall();
+			}
+			
+			if(Input.GetAxis("Vertical") > 0)
+			{
+				if(jumpForce < playerCharacter.maxJump)
+				{
+					jumpForce += playerCharacter.jumpGain;
+					
+					if(!playerCharacter.hasBoots)
+					{
+						jumpForce += ((int)playerCharacter.jumpGain >> 1);
+					}
+					
+					playerCharacter.rigidbody2D.AddForce(new Vector2(0, playerCharacter.maxJump - jumpForce));
+				}
+			}
+			else
+			{
+				jumpForce = playerCharacter.maxJump;
+			}
+			
+			if(Input.GetButtonDown("Fire1"))
+			{
+				playerCharacter.attack();
+			}
+			
+			motion.y = playerCharacter.getFallSpeed();
+			motion.x = Input.GetAxis("Horizontal") * playerCharacter.speed;
+			playerCharacter.setMotion(motion);
 		}
-		else
-		{
-			jumpForce = playerCharacter.maxJump;
-		}
-		
-		if(Input.GetButtonDown("Fire1"))
-		{
-			playerCharacter.attack();
-		}
-		
-		motion.y = playerCharacter.getFallSpeed();
-		motion.x = Input.GetAxis("Horizontal") * playerCharacter.speed;
-		playerCharacter.setMotion(motion);
-		
+
 		return;
 	}
 }

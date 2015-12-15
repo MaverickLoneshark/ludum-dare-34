@@ -14,10 +14,10 @@ public class PlayerCharacter : MonoBehaviour {
 	[SerializeField] private float maxSpeed = 30.0F;
 
 	[SerializeField] private bool hasSword = false;
-	[SerializeField] private bool hasCookie = false;
 	[SerializeField] private bool hasGun = false;
 	public bool hasSack = false;
 	public bool hasBoots = false;
+	public bool hasCookie = false;
 
 	private bool grounded;
 	private bool crouching;
@@ -164,6 +164,11 @@ public class PlayerCharacter : MonoBehaviour {
 				animator.SetBool("jumpState", true);
 			}
 		}
+
+		if(transform.position.y < -100) {
+			Camera.main.transform.FindChild("Canvas").gameObject.SetActive(true);
+			Camera.main.GetComponent<GameController>().gameState = "gameover";
+		}
 		
 		return;
 	}
@@ -181,9 +186,9 @@ public class PlayerCharacter : MonoBehaviour {
 			}
 		}
 		
-		if (enemyController)
+		if(enemyController)
 		{
-			switch (enemyController.type)
+			switch(enemyController.type)
 			{
 				case "rawrbert":
 					Camera.main.GetComponent<UnityStandardAssets._2D.Camera2DFollow>().target = otherGameObject.transform;
