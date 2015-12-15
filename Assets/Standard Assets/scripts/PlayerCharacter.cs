@@ -29,7 +29,13 @@ public class PlayerCharacter : MonoBehaviour {
 	const float checkRadius = 0.5f; // Radius of the overlap circle to determine if grounded
 	private Animator animator;
 	private PlayerController playerController;
-	
+
+	public void standBy() {
+		animator.SetTrigger("triggerIdle");
+
+		return;
+	}
+
 	public void attack() {
 		if((!crouching) && hasSword) {
 			animator.SetTrigger("triggerAttack");

@@ -65,6 +65,12 @@ public class PlayerController : MonoBehaviour {
 			motion.x = Input.GetAxis("Horizontal") * playerCharacter.speed;
 			playerCharacter.setMotion(motion);
 		}
+		else
+		{
+			motion.x = 0;
+			motion.y = 0;
+			playerCharacter.setMotion(motion);
+		}
 
 		return;
 	}
